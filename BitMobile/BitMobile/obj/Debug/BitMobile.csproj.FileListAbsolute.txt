@@ -1,0 +1,18 @@
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\bin\Debug\BitMobile.exe.config
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\bin\Debug\BitMobile.exe
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\bin\Debug\BitMobile.pdb
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\obj\Debug\BitMobile.csprojResolveAssemblyReference.cache
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\obj\Debug\BitMobile.Form1.resources
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\obj\Debug\BitMobile.Properties.Resources.resources
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\obj\Debug\BitMobile.csproj.GenerateResource.Cache
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\obj\Debug\BitMobile.exe
+c:\users\indy\documents\visual studio 2012\Projects\BitMobile\BitMobile\obj\Debug\BitMobile.pdb
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\bin\Debug\BitMobile.exe.config
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\obj\Debug\BitMobile.exe
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\obj\Debug\BitMobile.pdb
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\bin\Debug\BitMobile.exe
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\bin\Debug\BitMobile.pdb
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\obj\Debug\BitMobile.csprojResolveAssemblyReference.cache
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\obj\Debug\BitMobile.Form1.resources
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\obj\Debug\BitMobile.Properties.Resources.resources
+C:\Users\Indy\Documents\GitHub\Up-GoMobile\BitMobile\BitMobile\obj\Debug\BitMobile.csproj.GenerateResource.Cache
