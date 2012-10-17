@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BitMobile/" targetNamespace="http://BitMobile/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SQLException" type="tns:SQLException" />
+  <xs:element name="addAnOrder" type="tns:addAnOrder" />
+  <xs:element name="addAnOrderResponse" type="tns:addAnOrderResponse" />
+  <xs:element name="addAnOrderWithoutApproved" type="tns:addAnOrderWithoutApproved" />
+  <xs:element name="addAnOrderWithoutApprovedResponse" type="tns:addAnOrderWithoutApprovedResponse" />
+  <xs:element name="getAnOrder" type="tns:getAnOrder" />
+  <xs:element name="getAnOrderResponse" type="tns:getAnOrderResponse" />
+  <xs:element name="getOrdersList" type="tns:getOrdersList" />
+  <xs:element name="getOrdersListResponse" type="tns:getOrdersListResponse" />
+  <xs:complexType name="getOrdersList">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getOrdersListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SQLException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SQLState" type="xs:string" />
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sqlException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="exception">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:throwable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="throwable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="stackTrace" nillable="true" type="tns:stackTraceElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stackTraceElement" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAnOrder">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAnOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstName" type="xs:string" />
+      <xs:element minOccurs="0" name="ifApproved" type="xs:int" />
+      <xs:element minOccurs="0" name="lastName" type="xs:string" />
+      <xs:element minOccurs="0" name="orderID" type="xs:int" />
+      <xs:element minOccurs="0" name="planID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addAnOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element minOccurs="0" name="arg3" type="xs:int" />
+      <xs:element minOccurs="0" name="arg4" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addAnOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addAnOrderWithoutApproved">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addAnOrderWithoutApprovedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

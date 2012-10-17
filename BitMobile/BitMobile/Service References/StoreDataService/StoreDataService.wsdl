@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://BitMobile/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="StoreDataService" targetNamespace="http://BitMobile/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://fastws.qut.edu.au:8080/StoreDataService/StoreDataQuery?xsd=1" namespace="http://BitMobile/" />
+    </xsd:schema>
+  </types>
+  <message name="addAnOrderWithoutApproved">
+    <part name="parameters" element="tns:addAnOrderWithoutApproved" />
+  </message>
+  <message name="addAnOrderWithoutApprovedResponse">
+    <part name="parameters" element="tns:addAnOrderWithoutApprovedResponse" />
+  </message>
+  <message name="getAnOrder">
+    <part name="parameters" element="tns:getAnOrder" />
+  </message>
+  <message name="getAnOrderResponse">
+    <part name="parameters" element="tns:getAnOrderResponse" />
+  </message>
+  <message name="addAnOrder">
+    <part name="parameters" element="tns:addAnOrder" />
+  </message>
+  <message name="addAnOrderResponse">
+    <part name="parameters" element="tns:addAnOrderResponse" />
+  </message>
+  <message name="getOrdersList">
+    <part name="parameters" element="tns:getOrdersList" />
+  </message>
+  <message name="getOrdersListResponse">
+    <part name="parameters" element="tns:getOrdersListResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <portType name="StoreDataQuery">
+    <operation name="addAnOrderWithoutApproved">
+      <input wsam:Action="http://BitMobile/StoreDataQuery/addAnOrderWithoutApprovedRequest" message="tns:addAnOrderWithoutApproved" />
+      <output wsam:Action="http://BitMobile/StoreDataQuery/addAnOrderWithoutApprovedResponse" message="tns:addAnOrderWithoutApprovedResponse" />
+    </operation>
+    <operation name="getAnOrder">
+      <input wsam:Action="http://BitMobile/StoreDataQuery/getAnOrderRequest" message="tns:getAnOrder" />
+      <output wsam:Action="http://BitMobile/StoreDataQuery/getAnOrderResponse" message="tns:getAnOrderResponse" />
+    </operation>
+    <operation name="addAnOrder">
+      <input wsam:Action="http://BitMobile/StoreDataQuery/addAnOrderRequest" message="tns:addAnOrder" />
+      <output wsam:Action="http://BitMobile/StoreDataQuery/addAnOrderResponse" message="tns:addAnOrderResponse" />
+    </operation>
+    <operation name="getOrdersList">
+      <input wsam:Action="http://BitMobile/StoreDataQuery/getOrdersListRequest" message="tns:getOrdersList" />
+      <output wsam:Action="http://BitMobile/StoreDataQuery/getOrdersListResponse" message="tns:getOrdersListResponse" />
+      <fault wsam:Action="http://BitMobile/StoreDataQuery/getOrdersList/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="StoreDataQueryPortBinding" type="tns:StoreDataQuery">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="addAnOrderWithoutApproved">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAnOrder">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addAnOrder">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOrdersList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="StoreDataService">
+    <port name="StoreDataQueryPort" binding="tns:StoreDataQueryPortBinding">
+      <soap:address location="http://fastws.qut.edu.au:8080/StoreDataService/StoreDataQuery" />
+    </port>
+  </service>
+</definitions>
