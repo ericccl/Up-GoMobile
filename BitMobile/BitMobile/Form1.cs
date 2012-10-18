@@ -7,24 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
+//using System.Drawing;
 using System.IO;
 
 namespace BitMobile
 {
+    using StoreDataService;
+
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
 
-            for (int i = 0; i < listBox1.Items.Count; i++)
+            for (int i = 0; i < availablePlansListBox.Items.Count; i++)
             {
-                comboBox2.Items.Add(listBox1.Items[i]);
+                planRegisterCustomerComboBox.Items.Add(availablePlansListBox.Items[i]);
             }
-        }
 
-        
+            //var storeDataService = new StoreDataService.StoreDataQuery();
+        }
 
         
         private void label1_Click(object sender, EventArgs e)
@@ -79,19 +81,19 @@ namespace BitMobile
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox10.Text = "iPhone 5 $49 Cap";
-            textBox11.Text = "$" + (49 * 12);
-            textBox12.Text = "October 2013";
+            planNameExistingPlanTextBox.Text = "iPhone 5 $49 Cap";
+            payoutFigureExistingPlanTextBox.Text = "$" + (49 * 12);
+            endDateExistingPlanTextBox.Text = "October 2013";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox10.Text = null;
-            textBox11.Text = null;
-            textBox12.Text = null;
-            textBox8.Text = null;
-            textBox9.Text = null;
-            comboBox3.Text = null;
+            planNameExistingPlanTextBox.Text = null;
+            payoutFigureExistingPlanTextBox.Text = null;
+            endDateExistingPlanTextBox.Text = null;
+            firstNameExistingPlanTextBox.Text = null;
+            surnameExistingPlanTextBox.Text = null;
+            companyComboBox.Text = null;
         }
 
         private void label23_Click(object sender, EventArgs e)
@@ -101,17 +103,17 @@ namespace BitMobile
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox1.Text = null;
-            textBox2.Text = null;
-            textBox3.Text = null;
-            textBox4.Text = null;
-            textBox5.Text = null;
-            textBox6.Text = null;
-            textBox7.Text = null;
-            comboBox1.Text = null;
-            comboBox2.Text = null;
-            comboBox4.Text = null;
-            checkBox1.Checked = false;
+            firstNameRegisterCustomerTextBox.Text = null;
+            surnameRegisterCustomerTextBox.Text = null;
+            streetAddressRegisterCustomerTextBox.Text = null;
+            suburbRegisterCustomerTextBox.Text = null;
+            postcodeRegisterCustomerTextBox.Text = null;
+            emailRegisterCustomerTextBox.Text = null;
+            contactNumberRegisterCustomerTextBox.Text = null;
+            stateRegisterCustomerComboBox.Text = null;
+            planRegisterCustomerComboBox.Text = null;
+            transferNumberRegisterCustomerComboBox.Text = null;
+            existingPlanRegisterCustomerCheckBox.Checked = false;
          }
 
         private void label32_Click(object sender, EventArgs e)
